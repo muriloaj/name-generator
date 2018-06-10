@@ -1,8 +1,10 @@
 package com.github.muriloaj.namegenerator.model
 
-data class ChemicalElement(val z: Long,
-                           val symbol: String,
-                           val latin: String,
-                           val portuguese: String,
-                           val spanish: String,
-                           val english: String)
+data class ChemicalElement(var z: String,
+                           var symbol: String,
+                           var latin: String,
+                           var portuguese: String,
+                           var spanish: String,
+                           var english: String) {
+    constructor() : this("", "", "", "", "", "")
+}
