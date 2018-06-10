@@ -1,37 +1,53 @@
-## Welcome to GitHub Pages
+## Name Generator
 
-You can use the [editor on GitHub](https://github.com/muriloaj/studious-octo-giggle/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Name generator is a Hello World Kotlin project using Springboot. The names were provided dinamically based in some elements found at periodic table, in English, Spanish, Portuguese, Latin besides its atomic number and symbol. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+To run on terminal:
+```sh
+$ ./gradlew bootRun
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Endpoints + functions
 
-### Jekyll Themes
+### 'z' - Atomic random number
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/muriloaj/studious-octo-giggle/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```
+$ curl http://localhost:8080/periodic-table/z
+```
 
-### Support or Contact
+### 'symbol' - Random symbol
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+```
+$ curl http://localhost:8080/periodic-table/symbol
+```
+
+### 'en' - English random name
+
+```
+$ curl http://localhost:8080/periodic-table/en
+```
+
+### 'es' - Spanish random name
+```
+$ curl http://localhost:8080/periodic-table/es
+```
+
+### 'pt' - Portuguese random name
+
+```
+$ curl http://localhost:8080/periodic-table/pt
+```
+
+### 'latin' - Latin random namer
+
+```
+$ curl http://localhost:8080/periodic-table/latin
+```
+
+### 'mix' - Atomic number, Portuguese, English, Latin and Spanish totally shuffled and randomized
+
+```
+$ curl http://localhost:8080/periodic-table/mix
+```
+
+
