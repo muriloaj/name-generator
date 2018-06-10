@@ -8,6 +8,7 @@ import java.util.*
 @Service
 class ChemicalElementService {
 
+
     fun importFromCsv(): List<ChemicalElement> {
 
         val elements = mutableListOf<ChemicalElement>()
@@ -59,8 +60,7 @@ class ChemicalElementService {
             .append(genPt()).append("_")
             .append(genEn()).append("_")
             .append(genLatin()).append("_")
-            .append(genEs()).append("_")
-            .append(genSymbol())
+            .append(genEs())
             .toString()
 
 }
