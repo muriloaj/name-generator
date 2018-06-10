@@ -53,4 +53,14 @@ class ChemicalElementService {
 
     fun genEn(): String = randomElement().english
 
+    fun genMix(): String = StringBuilder()
+            .append(genZ()).append("_")
+            .append(genSymbol()).append("_")
+            .append(genPt()).append("_")
+            .append(genEn()).append("_")
+            .append(genLatin()).append("_")
+            .append(genEs()).append("_")
+            .append(genSymbol())
+            .toString()
+
 }

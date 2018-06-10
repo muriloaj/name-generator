@@ -2,10 +2,17 @@ package com.github.muriloaj.namegenerator.controller
 
 import com.github.muriloaj.namegenerator.service.ChemicalElementService
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class GeneratorController(private val chemicalElementService: ChemicalElementService) {
+@RequestMapping("/periodic-table")
+class ChemicalElementController(private val chemicalElementService: ChemicalElementService) {
+
+    @GetMapping("/mix")
+    fun generateMixed(): String {
+        return chemicalElementService.genMix()
+    }
 
     @GetMapping("/z")
     fun generateZ(): String {
@@ -36,5 +43,6 @@ class GeneratorController(private val chemicalElementService: ChemicalElementSer
     fun generateEn(): String {
         return chemicalElementService.genEn()
     }
+
 
 }
