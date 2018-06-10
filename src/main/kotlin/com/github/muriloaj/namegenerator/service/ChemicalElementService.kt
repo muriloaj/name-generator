@@ -32,13 +32,25 @@ class ChemicalElementService {
 
     }
 
-    fun genZ(): String {
+    fun randomElement(): ChemicalElement {
         importFromCsv().let {
             val bound: Int = it.size
             val index: Int = Random().nextInt(bound)
-            return it.get(index).z
+            return it.get(index)
 
         }
     }
+
+    fun genZ(): String = randomElement().z
+
+    fun genSymbol(): String = randomElement().symbol
+
+    fun genPt(): String = randomElement().portuguese
+
+    fun genEs(): String = randomElement().spanish
+
+    fun genLatin(): String = randomElement().latin
+
+    fun genEn(): String = randomElement().english
 
 }
